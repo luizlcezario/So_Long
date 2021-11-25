@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 15:37:11 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/24 23:14:56 by llima-ce         ###   ########.fr       */
+/*   Created: 2021/10/22 15:37:11 by llima-ce          #+#    #+#             */
+/*   Updated: 2021/11/24 23:30:52 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,12 +77,12 @@ static int	read_map(t_module *module)
 	{
 		if (read_map_while(module, tmp_map, &a, -1) == -1)
 			return (-1);
-		objects.E += ft_verify_objects(module->map->map[a], 'E');
-		objects.C += ft_verify_objects(module->map->map[a], 'C');
-		objects.P += ft_verify_objects(module->map->map[a], 'P');
+		objects.e += ft_verify_objects(module->map->map[a], 'E');
+		objects.c += ft_verify_objects(module->map->map[a], 'C');
+		objects.p += ft_verify_objects(module->map->map[a], 'P');
 		a++;
 	}
-	if (objects.C < 1 || objects.P != 1 || objects.E != 1)
+	if (objects.c < 1 || objects.p != 1 || objects.e != 1)
 		return (error(5, "Is somenthing missing in the map!"));
 	if (a - 1 < 4)
 		return (error(5, "Height is too small!"));

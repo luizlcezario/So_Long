@@ -6,12 +6,11 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 23:11:35 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/11/24 23:11:58 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/24 23:26:17 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
 
 static void	put_img(t_module *module, void *sprite)
 {

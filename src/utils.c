@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 15:39:07 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/24 23:13:46 by llima-ce         ###   ########.fr       */
+/*   Created: 2021/10/22 15:39:07 by llima-ce          #+#    #+#             */
+/*   Updated: 2021/11/24 23:30:34 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	ft_verify_objects(char *line, char obeject)
 
 void	init_struct(t_objects *objects)
 {
-	objects->C = 0;
-	objects->P = 0;
-	objects->E = 0;
+	objects->c = 0;
+	objects->p = 0;
+	objects->e = 0;
 }
