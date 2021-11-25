@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vantonie <vantonie@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:39:07 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/15 22:53:10 by vantonie         ###   ########.fr       */
+/*   Updated: 2021/11/25 01:56:34 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,25 @@ void	free_ptr(void **ptr)
 		free(*ptr);
 		*ptr = NULL;
 	}
+}
+
+int ft_verify_objects(char *line, char obeject)
+{
+	int a;
+
+	a = 0;
+	if (line != NULL)
+	{
+		if (ft_strchr(line, obeject))
+			a++;
+		return(a);
+	}
+	return(a);
+}
+
+void init_struct(t_objects *objects)
+{
+	objects->C = 0;
+	objects->P = 0;
+	objects->E = 0;
 }

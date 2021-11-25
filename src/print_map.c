@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:37:15 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/11/21 16:20:08 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/25 03:02:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,12 @@ static void	coin_print(t_module *module)
 
 static void	enemines_print(t_module *module)
 {
-	int	col;
-	int	row;
+	int col;
 
 	col = module->map->col - module->player->player_x;
-	row = module->map->row - module->player->player_y;
-	if (col < row)
+	if (abs(col) <= 3)
 	{
-		if(module->map->col <= module->player->player_x)
+		if(module->map->row <= module->player->player_y)
 			put_img(module, module->sprite->enemies[0]);
 		else
 			put_img(module, module->sprite->enemies[3]);

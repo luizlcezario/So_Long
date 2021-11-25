@@ -1,16 +1,16 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
 		{
 			"name": "lldb",
 			"type": "lldb",
 			"request": "launch",
 			"program": "${workspaceRoot}/a.out",
 			"args": [
-				"./assets/maps/map_2.ber",
+				"./assets/maps/map_1.ber",
 			],
 			"cwd": "${workspaceRoot}",
 			"preLaunchTask": "C/C++: gcc build active file",

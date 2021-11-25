@@ -3,23 +3,24 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/22 16:11:34 by prafael-          #+#    #+#              #
-#    Updated: 2021/11/21 15:16:16 by llima-ce         ###   ########.fr        #
+#    Updated: 2021/11/25 02:33:17 by marvin           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME = Solong.a
 CFLAGS = -Wall -Wextra -Werror
 CC = gcc
 LIBFT = ./libft/libft.a
+MINILIBX = ./minilibx/libmlx_Linux.a
 SRC =	so_long.c error.c start_game.c utils.c move.c verify_map.c \
 		hooks.c print_map.c
+
 OBJ = $(SRC:.c=.o)
 
-all: $(LIBFT)
+all: $(LIBFT) $(MINILIBX)
 	$(CC) $(addprefix ./src/,$(SRC)) $(CFLAGS) -I . -g3 -Lmlx_Linux -lmlx_Linux -L ./minilibx -Imlx_Linux -L ./libft -lft -lXext -lX11 -lm -lz
 
 $(OBJ):
@@ -28,6 +29,8 @@ $(OBJ):
 $(LIBFT):
 	make others -C ./libft
 
+$(MINILIBX):
+	./minilibx/configure
 clean:
 	rm -f $(OBJ)
 

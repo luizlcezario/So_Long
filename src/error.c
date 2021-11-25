@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:45:38 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/21 16:20:08 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/25 02:49:06 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,9 @@ errnum = 39 --> No locks available
 
 int	error(int errnum, char *message)
 {
-	ft_printf("Error\n\033[31m");
-	if (errnum == 0 && message != NULL)
-		perror(message);
-	else if (errnum > 0)
-		perror(strerror(errnum));
+	ft_printf("\033[31mError\n\033[35m\t");
+	if (errnum > 0 && message != NULL)
+		ft_printf("%s:%s\n", message, strerror(errnum));
 	else
 		perror(strerror(26));
 	ft_printf("\033[0m");

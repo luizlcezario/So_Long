@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	{
 		module = malloc(1 * sizeof(t_module));
 		if(module == NULL)
-			exit(error(14, NULL)); 
+			exit(error(14, "Alocation of memory error in module.map!")); 
 		if (verify_map(argv[1], module) == 0)
 		{
 			start_game(module);
@@ -39,5 +39,5 @@ int	main(int argc, char **argv)
 		}
 	}
 	else
-		exit (error(22, NULL));
+		exit (error(22, "Please run with a map path in the terminal!"));
 }

@@ -59,6 +59,13 @@ typedef struct s_map
 	int row;
 } t_map;
 
+typedef struct s_objects
+{
+	int P;
+	int C;
+	int E;
+} t_objects;
+
 typedef struct s_sprite
 {
 
@@ -114,7 +121,8 @@ void move(t_module *module, int x, int y, int eye);
 int verify_map(char *name_map, t_module *module);
 int start_game(t_module *module);
 int print_map(t_module *module);
-
+int ft_verify_objects(char *line, char obeject);
 void hook(t_module *module);
+void init_struct(t_objects *objects);
 
 #endif
