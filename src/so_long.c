@@ -6,15 +6,11 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:44:25 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/21 16:20:09 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/24 23:12:52 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-// erro map .ber
-// sprites personagem
-// norminette
 
 int	main(int argc, char **argv)
 {
@@ -23,8 +19,8 @@ int	main(int argc, char **argv)
 	if (argc == 2)
 	{
 		module = malloc(1 * sizeof(t_module));
-		if(module == NULL)
-			exit(error(14, "Alocation of memory error in module.map!")); 
+		if (module == NULL)
+			exit(error(14, "Alocation of memory error in module.map!"));
 		if (verify_map(argv[1], module) == 0)
 		{
 			start_game(module);

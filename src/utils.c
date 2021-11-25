@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:39:07 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/25 01:56:34 by marvin           ###   ########.fr       */
+/*   Updated: 2021/11/24 23:13:46 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,21 @@ void	free_ptr(void **ptr)
 	}
 }
 
-int ft_verify_objects(char *line, char obeject)
+int	ft_verify_objects(char *line, char obeject)
 {
-	int a;
+	int	a;
 
 	a = 0;
 	if (line != NULL)
 	{
 		if (ft_strchr(line, obeject))
 			a++;
-		return(a);
+		return (a);
 	}
-	return(a);
+	return (a);
 }
 
-void init_struct(t_objects *objects)
+void	init_struct(t_objects *objects)
 {
 	objects->C = 0;
 	objects->P = 0;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   verify_map.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:37:11 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/25 02:51:34 by marvin           ###   ########.fr       */
+/*   Updated: 2021/11/24 23:14:56 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,8 @@ static int	read_map(t_module *module)
 	tmp_map = NULL;
 	module->map->width = 0;
 	init_struct(&objects);
-	while (module->map->map == NULL || module->map->map[a - 1] != NULL || a == 0)
+	while (module->map->map == NULL || module->map->map[a - 1] != NULL
+		|| a == 0)
 	{
 		if (read_map_while(module, tmp_map, &a, -1) == -1)
 			return (-1);
@@ -94,8 +95,9 @@ static int	verify_name_file_map(char *name_map)
 	int	len;
 
 	len = ft_strlen(name_map);
-	if (name_map[len - 1] == 'r' && name_map[len - 2] == 'e' && name_map[len - 3] == 'b' && name_map[len - 4] == '.')
-			return(0);
+	if (name_map[len - 1] == 'r' && name_map[len - 2] == 'e'
+		&& name_map[len - 3] == 'b' && name_map[len - 4] == '.')
+		return (0);
 	return (-1);
 }
 
@@ -104,10 +106,10 @@ int	verify_map(char *name_map, t_module *module)
 	module->map = malloc(1 * sizeof(t_map));
 	module->map->map = NULL;
 	if (module->map == NULL)
-		return (error(14 , "Alocation of memory error in module.map!"));
+		return (error(14, "Alocation of memory error in module.map!"));
 	if (verify_name_file_map(name_map))
 		return (error(2,
-					"The file type is not compatible, please use .ber files!"));
+				"The file type is not compatible, please use .ber files!"));
 	module->map->fd = open(name_map, O_RDONLY);
 	if (module->map->fd == -1)
 		return (error(9, "File dosen't exists"));

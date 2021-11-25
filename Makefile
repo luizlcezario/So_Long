@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: marvin <marvin@student.42.fr>              +#+  +:+       +#+         #
+#    By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/22 16:11:34 by prafael-          #+#    #+#              #
-#    Updated: 2021/11/25 02:33:17 by marvin           ###   ########.fr        #
+#    Updated: 2021/11/24 23:12:16 by llima-ce         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = gcc
 LIBFT = ./libft/libft.a
 MINILIBX = ./minilibx/libmlx_Linux.a
 SRC =	so_long.c error.c start_game.c utils.c move.c verify_map.c \
-		hooks.c print_map.c
+		hooks.c print_map.c print_map_utils.c
 
 OBJ = $(SRC:.c=.o)
 

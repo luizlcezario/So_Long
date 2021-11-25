@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   start_game.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 17:47:53 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/11/25 02:50:17 by marvin           ###   ########.fr       */
+/*   Updated: 2021/11/24 23:13:15 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ int	start_game(t_module *module)
 			module->map->width * SPRITE_SIZE,
 			module->map->height * SPRITE_SIZE, "so_long");
 	if (module->vars->win == NULL)
-		return (error(15, "It is not possible to open the window of the game!"));
+		return (error(15,
+				"It is not possible to open the window of the game!"));
 	if (load_sprites(module->vars, module->sprite) == 1)
 		return (1);
 	module->player->player_eye = 0;

@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 15:43:58 by prafael-          #+#    #+#             */
-/*   Updated: 2021/11/21 21:53:22 by llima-ce         ###   ########.fr       */
+/*   Updated: 2021/11/24 23:11:57 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,6 @@ int print_map(t_module *module);
 int ft_verify_objects(char *line, char obeject);
 void hook(t_module *module);
 void init_struct(t_objects *objects);
+int choose_sprite(char *line, t_module *module);
 
 #endif
