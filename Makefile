@@ -6,22 +6,29 @@
 #    By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/22 16:11:34 by prafael-          #+#    #+#              #
-#    Updated: 2021/11/24 23:12:16 by llima-ce         ###   ########.fr        #
+#    Updated: 2022/01/23 22:37:20 by llima-ce         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Solong.a
+NAME = so_long
+
 CFLAGS = -Wall -Wextra -Werror
+
 CC = gcc
+
 LIBFT = ./libft/libft.a
+
 MINILIBX = ./minilibx/libmlx_Linux.a
+
 SRC =	so_long.c error.c start_game.c utils.c move.c verify_map.c \
 		hooks.c print_map.c print_map_utils.c
 
 OBJ = $(SRC:.c=.o)
 
-all: $(LIBFT) $(MINILIBX)
-	$(CC) $(addprefix ./src/,$(SRC)) $(CFLAGS) -I . -g3 -Lmlx_Linux -lmlx_Linux -L ./minilibx -Imlx_Linux -L ./libft -lft -lXext -lX11 -lm -lz
+all: $(NAME)
+
+$(NAME): $(LIBFT) $(MINILIBX)
+	$(CC) $(addprefix ./src/,$(SRC)) $(CFLAGS) -I . -g3 -Lmlx_Linux -lmlx_Linux -L ./minilibx -Imlx_Linux -L ./libft -lft -lXext -lX11 -lm -lz -o $(NAME)
 
 $(OBJ):
 	gcc $(CFLAGS) -I . -c $(addprefix ./src/, $(SRC))
@@ -31,13 +38,14 @@ $(LIBFT):
 
 $(MINILIBX):
 	./minilibx/configure
+
 clean:
-	rm -f $(OBJ)
+	rm -f $(NAME)
 
 teste: all
-	./a.out "./assets/maps/map_3.ber"
+	$(NAME) "./assets/maps/map_3.ber"
 
 valgrind: all
-	valgrind -s --show-leak-kinds=all --track-origins=yes  --leak-check=full   ./a.out "./assets/maps/map_3.ber" 
-# $(OBJ): $(SRC)
-# 	$(CC) -Wall -Wextra -Werror -Imlx_linux -O3 -c $(SRC)
+	$(NAME) "./assets/maps/map_3.ber" 
+	
+.PHONY: all clean teste valgrind

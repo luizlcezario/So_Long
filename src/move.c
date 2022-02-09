@@ -6,7 +6,7 @@
 /*   By: llima-ce <llima-ce@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:29:48 by llima-ce          #+#    #+#             */
-/*   Updated: 2021/11/24 23:34:43 by llima-ce         ###   ########.fr       */
+/*   Updated: 2022/02/01 14:18:38 by llima-ce         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	move(t_module *module, int x, int y, int eye)
 		module->player->player_eye = eye;
 	else if (res == 2)
 	{
-		ft_printf("\033[32mYOU WIN!\n\033[0");
+			ft_printf("\033[32mYOU WIN!\n\033[0");
 		module->end_game = TRUE;
 	}
 	else if (res == 3)

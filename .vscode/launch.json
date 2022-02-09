@@ -8,7 +8,7 @@
 			"name": "lldb",
 			"type": "lldb",
 			"request": "launch",
-			"program": "${workspaceRoot}/a.out",
+			"program": "${workspaceRoot}/so_long",
 			"args": [
 				"./assets/maps/map_1.ber",
 			],
