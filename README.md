@@ -37,6 +37,7 @@ The player has to dodge enemies and collect all bonuses to escape. The map (`.be
 <div align="center">
 <img src="./.github/so_long.gif">
 </div>
+
 # :construction_worker: How to Run
 ```bash
 # If you want a Script for testing use this :
