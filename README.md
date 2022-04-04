@@ -12,12 +12,12 @@
   <a aria-label="Completed" href="https://www.42sp.org.br/">
     <img src="https://img.shields.io/badge/42.sp-So_Long-682998?logo="></img>
   </a>
-  <a href="https://github.com/Face-Tattoo/So_Long/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Face-Tattoo/So_Long?color=682998">
+  <a href="https://github.com/luizlcezario/So_Long/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/luizlcezario/So_Long?color=682998">
   </a> 
 
-  <a href="https://github.com/Face-Tattoo/So_Long/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/Face-Tattoo/So_Long?color=682998&logo=github">
+  <a href="https://github.com/luizlcezario/So_Long/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/luizlcezario/So_Long?color=682998&logo=github">
   </a>
 </p>
 
